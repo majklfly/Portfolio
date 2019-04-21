@@ -11,4 +11,4 @@ addons:
   postgresql:
 
 script:
-  -python manage.py test && flake8
+  -flake8

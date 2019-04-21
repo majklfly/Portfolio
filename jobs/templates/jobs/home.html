@@ -1,5 +1,6 @@
-{% include "jobs/base.html" %}
+{% extends "jobs/base.html" %}
 
+{% load staticfiles %}
 {% block body_content %}
 
 <section class="jumbotron text-center">
@@ -9,6 +10,7 @@
   <p>
     <a href="mailto:majklfly@gmail.com" class="btn btn-primary my-2">Email me!</a>
   </p>
+  <img src="{% static 'Michal_0001.jpg' %}" height=300>
 </div>
 </section>
 <div class="album py-5 bg-light">
