@@ -1,0 +1,36 @@
+{% include "jobs/base.html" %}
+
+{% block body_content %}
+
+<section class="jumbotron text-center">
+<div class="container">
+  <h1 class="jumbotron-heading">Michal Mucha</h1>
+  <p class="lead text-muted">Thank you for comming. Please, let me show you my projects.</p>
+  <p>
+    <a href="mailto:majklfly@gmail.com" class="btn btn-primary my-2">Email me!</a>
+  </p>
+</div>
+</section>
+<div class="album py-5 bg-light">
+   <div class="container">
+
+     <div class="row">
+
+       {% for job in jobs.all %}
+       <div class="col-md-4">
+         <div class="card mb-4 shadow-sm">
+          <img src="{{ job.image.url }}" class="card-img-top">
+             <p class="card-text">{{ job.summary }}</p>
+             <div class="d-flex justify-content-between align-items-center">
+               <div class="btn-group">
+                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+             </div>
+           </div>
+         </div>
+       </div>
+       {% endfor %}
+     </div>
+   </div>
+ </div>
+
+{% endblock body_content %}
